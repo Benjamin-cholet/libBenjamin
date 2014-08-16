@@ -25,15 +25,9 @@ unsigned long combinaisons(int n, int k)
     mpz_init_set_str(b, big_factorial(k), 10);
     mpz_init_set_str(c, big_factorial(n-k), 10);
     
-    //printf("n! : %s\nk! : %s\n(n-k)! : %s\n", big_factorial(n), big_factorial(k), big_factorial(n-k));
-
     mpz_mul(b, b, c);
     
-    //printf("k!(n-k)! : %ld\n", mpz_get_ui(b));
-    
     mpz_div(a, a, b);
-    
-    //printf("n! / (k!(n-k)!) : %ld\n", mpz_get_ui(a));
-        
+            
     return mpz_get_ui(a);
 }
