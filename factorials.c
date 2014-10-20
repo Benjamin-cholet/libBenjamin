@@ -47,3 +47,23 @@ char *big_factorial(int a)
     
     return mpz_get_str(NULL, 10, p);
 }
+
+char *big_pow(int a, int b)
+{
+    if (b < 0) {
+        printf("not implemented yet !");
+        return "-1";
+    }
+    
+    if (b == 0)
+        return "1";
+    
+    mpz_t p;
+    
+    mpz_init_set_ui(p,a);
+    for (int i=1; i < b ; ++i){
+        mpz_mul_ui(p,p,a);
+    }
+    //    mpz_clear(p);
+    return mpz_get_str(NULL, 10, p);
+}
