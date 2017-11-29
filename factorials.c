@@ -22,7 +22,7 @@ unsigned long factorial(int a)
         fact *= a;
         
         if (ULONG_MAX / a < fact) {
-            printf("Factorial is too big !!");
+            printf("Factorial is too big!!");
             return -1;
         }
         a--;
@@ -51,7 +51,7 @@ char *big_factorial(int a)
 char *big_pow(int a, int b)
 {
     if (b < 0) {
-        printf("not implemented yet !");
+        printf("not implemented yet!");
         return "-1";
     }
     
